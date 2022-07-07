@@ -1,0 +1,13 @@
+@article{Wu:2016:fsrt, 
+author={K. Wu and A. Knoll and B. J. Isaac and H. Carr and V. Pascucci}, 
+journal={IEEE Transactions on Visualization and Computer Graphics}, 
+title={Direct Multifield Volume Ray Casting of Fiber Surfaces}, 
+year={2017}, 
+volume={23}, 
+number={1}, 
+pages={941-949}, 
+keywords={Isosurface;Multidimensional Data;Volume Rendering}, 
+doi={10.1109/TVCG.2016.2599040}, 
+ISSN={1077-2626}, 
+month={Jan}
+} 

@@ -1,0 +1,11 @@
+@article{Wu:2018:gvdb_flip, 
+author={Kui Wu and Nghia Truong and Cem Yuksel and Rama Hoetzlein}, 
+journal={Computer Graphics Forum (Proceedings of EUROGRAPHICS 2018)}, 
+title={Fast Fluid Simulations with Sparse Volumes on the GPU}, 
+year={2018}, 
+volume={37}, 
+number={2}, 
+pages={157-167}, 
+keywords={Physical simulation; Massively parallel and high-performance simulations}, 
+doi={10.1111/cgf.13350} 
+} 

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Real-time Fiber-level Cloth Rendering</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   
+   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+       <div class="container">
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                   <i class="fa fa-bars"></i>
+               </button>
+               <a class="navbar-brand page-scroll" href="http://people.csail.mit.edu/kuiwu">
+                   <i class="fa fa-play-circle"></i>  <span class="light">Kui </span> Wu
+               </a>
+           </div>
+
+           <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+               <ul class="nav navbar-nav">
+                   <li class="hidden">
+                       <a href="#page-top"></a>
+                   </li>
+                   <li>
+                       <a class="page-scroll" href="#rtcr">Real-time Cloth Rendering with Fiber-level Detail</a>
+                   </li>
+                   <li>
+                       <a class="page-scroll" href="#rtfr">Real-time Fiber-level Cloth Rendering</a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+   
+<section id="rtcr" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+			   <br>
+			   <br>
+		<br>
+				<p>IEEE Transactions on Visualization and Computer Graphics</p>
+				
+                <h1>Real-time Cloth Rendering with Fiber-level Detail</h1>
+				
+				<p><a href="http://people.csail.mit.edu/kuiwu">Kui Wu</a>, <a href="http://www.cemyuksel.com/">Cem Yuksel</a></p>
+
+				<img src="./RTFR/rtcr.png" width="800" height="320" border="0">
+				
+				<p> Specular Only <span style="padding-left:45px"></span>  Specular+Diffuse  <span style="padding-left:45px"></span> Specular+Ambient <span style="padding-left:30px"></span>  All Components</p>
+
+				<h3>Abstract</h3>
+
+				<p style="font-size:16px" align="left">
+					Modeling cloth with fiber-level geometry can produce highly realistic details. However, rendering fiber-level cloth models not only has a high memory cost but it also has a high computation cost even for offline rendering applications. In this paper we present a real-time fiber-level cloth rendering method for current GPUs. Our method procedurally generates fiber-level geometric details on-the-fly using yarn-level control points for minimizing the data transfer to the GPU. We also reduce the rasterization operations by collectively representing the fibers near the center of each ply that form the yarn structure. Moreover, we employ a level-of-detail strategy to minimize or completely eliminate the generation of fiber-level geometry that would have little or no impact on the final rendered image. Furthermore, we introduce a simple self-shadow computation method that allows lighting with self-shadows using relatively low-resolution shadow maps. We also provide a simple distance-based ambient occlusion approximation as well as an ambient illumination precomputation approach, both of which account for fiber-level self-occlusion of yarn. Finally, we discuss how to use a physical-based shading model with our fiber-level cloth rendering method and how to handle cloth animations with temporal coherency. We demonstrate the effectiveness of our approach by comparing our simplified fiber geometry to procedurally generated references and display knitwear containing more than a hundred million individual fiber curves at real-time frame rates with shadows and ambient occlusion.
+				</p>
+				
+				<img src="./RTFR/rtcr_animation.gif" height="320" border="0">
+				
+				<p> </p>
+				
+				<h3 style="font-size:16px" align="left">Paper [<a href="./RTFR/rtcr_lores.pdf"><b>Preprint</b></a>] (PDF, 26.1Mb) </h3>
+				<h3 style="font-size:16px" align="left">Data [<a href="http://www.cemyuksel.com/research/yarnmodels/"><b>Yarn-level Cloth Models</b></a>]</h3>
+				<h3 style="font-size:16px" align="left">Citation [<a href="./RTFR/rtcr_bib.txt"><b>Bibtex</b></a>]</h3>
+				<h3 >Demo</h3>
+				
+				<span class='embed-youtube' style='text-align:center; display: block;'><iframe width="560" height="315" src="https://www.youtube.com/embed/JPsA3pGYHFQ" frameborder="0" allowfullscreen></iframe></span>
+				<p> </p>		
+								
+			</div>
+		</div>
+	</section>
+   
+	<section id="rtfr" class="container content-section text-center">
+	        <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2">
+					<br>
+					<br>
+					<br>
+					<p>I3D 2017</p>
+					
+	                <h1>Real-time Fiber-level Cloth Rendering</h1>
+					
+					<p style="color:darkorange">The 3rd Best Paper & The 2nd Best Presentation Awards</p>
+
+					<p><a href="http://people.csail.mit.edu/kuiwu">Kui Wu</a>, <a href="http://www.cemyuksel.com/">Cem Yuksel</a></p>
+
+					<img src="./RTFR/rtfr.png" width="800" height="320" border="0">
+					
+					<p> </p>
+
+					<h3>Abstract</h3>
+
+					<p style="font-size:16px" align="left">
+						Modeling cloth with fiber-level geometry can produce highly realistic details. However, rendering fiber-level cloth models not only has a high memory cost but it also has a high computation cost even for offline rendering applications. In this paper we present a real-time fiber-level cloth rendering method for current GPUs. Our method procedurally generates fiber-level geometric details on-the-fly using yarn-level control points for minimizing the data transfer to the GPU. We also reduce the rasterization operations by collectively representing the fibers near the center of each ply that form the yarn structure. Moreover, we employ a level-of-detail strategy to minimize or completely eliminate the generation of fiber-level geometry that would have little or no impact on the final rendered image. Furthermore, we introduce a simple yarn-level ambient occlusion approximation and self-shadow computation method that allows lighting with self-shadows using relatively low-resolution shadow maps. We demonstrate the effectiveness of our approach by comparing our simplified fiber geometry to procedurally generated references and display knitwear containing more than a hundred million individual fiber curves at real-time frame rates with shadows and ambient occlusion.
+					</p>
+					
+					<img src="./RTFR/fiber_combine.png" height="320" border="0">
+					
+					<p style="font-size:16px" align="left">An example yarn model with our core fibers and regular fibers, and the comparison of our full model to a reference model generated offline</p>
+					<p> </p>
+					
+					<img src="./RTFR/shadow_component.png" width="800" height="320" border="0">
+					<p style="font-size:16px" align="left">Shadow components: A glove model showing the three shadow components: shadow map, self-shadows, and ambient occlusion </p>
+					<p> </p>
+					
+					<h3 style="font-size:16px" align="left">Paper [<a href="./RTFR/rtfr.pdf"><b>Preprint</b></a>] (PDF, 13Mb) </h3>
+					<h3 style="font-size:16px" align="left">Slides [<a href="./RTFR/rtfr.pptx"><b>PPT</b></a>]</h3>
+					<h3 style="font-size:16px" align="left">Data [<a href="http://www.cemyuksel.com/research/yarnmodels/"><b>Yarn-level Cloth Models</b></a>]</h3>
+					<h3 style="font-size:16px" align="left">Citation [<a href="./RTFR/rtfr_bib.txt"><b>Bibtex</b></a>]</h3>
+					
+					<h3 >Demo</h3>
+					
+					<span class='embed-youtube' style='text-align:center; display: block;'><iframe width="560" height="315" src="https://www.youtube.com/embed/My4codjQRlQ" frameborder="0" allowfullscreen></iframe></span>
+					<p> </p>		
+										
+				</div>
+			</div>
+		</section>   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kui Wu 2020</p>
+        </div>
+    </footer>
+
+   <!-- jQuery -->
+
+
+</body>
+
+</html>

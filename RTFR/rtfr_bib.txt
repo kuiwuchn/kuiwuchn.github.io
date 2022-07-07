@@ -1,0 +1,13 @@
+@inproceedings{Wu:2017:rtfr, 
+author = {Kui Wu and Cem Yuksel}, 
+title = {Real-time Fiber-level Cloth Rendering}, 
+booktitle = {ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D 2017)}, 
+year = {2017}, 
+numpages = {8}, 
+location = {San Francisco, CA}, 
+isbn = {978-1-4503-4886-7/17/03}, 
+url = {http://doi.acm.org/10.1145/3023368.3023372}, 
+doi = {10.1145/3023368.3023372}, 
+publisher = {ACM}, 
+address = {New York, NY, USA}, 
+} 

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stitch Meshes Modeling</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
+      
+	<nav class="navbar navbar-custom navbar-fixed-top" style="background-color:lightgrey;" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+                  <a class="navbar-brand page-scroll" href="http://people.csail.mit.edu/kuiwu"><span class="light" style="color:black;">Kui Wu </span></a>
+			</div>
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				<ul class="nav navbar-nav">
+					<li class="hidden"><a href="#page-top"></a></li>
+					<li><a class="page-scroll" href="#knitui" style="color:black;">KnitUI</a></li>
+					<li><a class="page-scroll" href="#wearable" style="color:black;">Wearable 3D Machine Knitting</a></li>
+					<li><a class="page-scroll" href="https://textiles-lab.github.io/publications/2019-visualknit/" style="color:black;">Visual Knitting Machine Programming</a></li>
+                    <li><a class="page-scroll" href="#knittable" style="color:black;">Knittable Stitch Meshes</a></li>
+                    <li><a class="page-scroll" href="#stitchmeshing" style="color:black;">Stitch Meshing</a></li>
+                </ul>
+			</div>
+        </div>
+	</nav>
+	
+  	<section id="knitui" class="container text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<br> <br> <br>
+  				<p>In Proceedings of CHI 2021 (to appear)</p>
+  	            <h1>KnitUI: Fabricating Interactive and Sensing Textiles with Machine Knitting</h1>
+				<p><a href="https://yyueluo.com/">Yiyue Luo*</a>, <a href="http://people.csail.mit.edu/kuiwu">Kui Wu*</a>, <a href="http://www-mtl.mit.edu/wpmu/tpalacios/">Tomás Palacios</a>, <a href="https://cdfg.mit.edu/wojciech"> Wojciech Matusik</a></p>
+				<p>(* indicates equal contributions)</p>
+				<img src="./knitui/knitui_teaser.jpg" width="800" border="0">
+				<p style="font-size:12px" align="left ">
+					<b>Example applications of KnitUI:</b> interactive educational toys, game controller, music controller glove, numpad wrist wrap, tactile sensing socks, and tactile robotic skin.
+				</p>
+  				<h3>Abstract</h3>
+  				<p style="font-size:16px" align="left">
+					With the recent interest in wearable electronics and smart garments, digital fabrication of sensing and interactive textiles is in increasing demand. Recently, advances in digital machine knitting offer opportunities for the programmable, rapid fabrication of soft, breathable textiles. In this paper, we present KnitUI, a novel, accessible machine-knitted user interface based on resistive pressure sensing. Employing conductive yarns and various machine knitting techniques, we computationally design and automatically fabricate the double-layered resistive sensing structures as well as the coupled conductive connection traces with minimal manual post-processing. We present an interactive design interface for users to customize KnitUI's colors, sizes, positions, and shapes. After investigating design parameters for the optimized sensing and interactive performance, we demonstrate KnitUI as a portable, deformable, washable, and customizable interactive and sensing platform. It obtains diverse applications, including wearable user interfaces, tactile sensing wearables, and artificial robot skin. 
+  				</p>						
+  				<h3 style="font-size:16px" align="left">
+					[<a href="./knitui/knitui.pdf"><b>Paper</b></a>]  
+					[<a href="https: //youtu.be/ga-hsKvZUck"><b>Video</b></a>]  
+				</h3>							
+				<br>
+				<span class='embed-youtube' style='text-align:center; display: block;'><iframe width="800" height="500" src="https://www.youtube.com/embed/ga-hsKvZUck" frameborder="0" allowfullscreen></iframe></span>
+				<br>
+				<img src="./knitui/sensing.png" width="800" border="0">
+				<p style="font-size:12px" align="left ">
+					<b>The sensing structure:</b> (from left to right) a double-layered sensing unit knitted with conventional and conductive yarns; the cross-sectional view (along the wale direction) of the sensing unit, with conductive short-rows on the bottom layer to increase sensitivity; when pressure is applied, the interactions between conductive yarn loops increase, leading to the drop of resistance.
+				</p>
+				<br>
+				<img src="./knitui/glove.jpg" width="800" border="0">
+				<p style="font-size:12px" align="left">
+					<b>Glove controller:</b>  left, conductive traces are added to existing knitted glove design; middle and right, glove with different controller designs.
+				</p>
+				<br>
+				<img src="./knitui/socks.jpg" width="800" border="0">
+				<p style="font-size:12px" align="center">
+					Sensor map and the corresponding pressure signals during six actions.
+				</p>
+				<br>
+  			</div>
+  		</div>
+  	</section>
+	
+	  
+  	<section id="wearable" class="container text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<br> <br> <br>
+  				<p>IEEE Transactions on Visualization and Computer Graphics (TVCG)</p>
+  	            <h1>Wearable 3D Machine Knitting</h1>
+				<h3 style="font-size:16px">Automatic Generation of Shaped Knit Sheets to Cover Real-World Objects</h3>
+				<p><a href="http://people.csail.mit.edu/kuiwu">Kui Wu</a>, <a href="http://tarini.di.unimi.it/"> Marco Tarini</a>, <a href="http://www.cemyuksel.com/">Cem Yuksel</a>, <a href="https://www.cs.cmu.edu/~jmccann/"> Jim McCann</a>, <a href="https://gaoxifeng.github.io/"> Xifeng Gao</a></p>
+				<img src="./wearable/four.jpg" width="800" border="0">
+  				<h3>Abstract</h3>
+  				<p style="font-size:16px" align="left">
+					Knitting can efficiently fabricate stretchable and durable soft surfaces. These surfaces are often designed to be worn on solid objects as covers, garments, and accessories. Given a 3D model, we consider a knit for it wearable if the knit not only reproduces the shape of the 3D model but also can be put on and taken off from the model without deforming the model. This ``wearability'' places additional constraints on surface design and fabrication, which existing machine knitting approaches do not take into account. We introduce the first practical automatic pipeline to generate knit designs that are both wearable and machine knittable. Our pipeline handles knittability and wearability with two separate modules that run in parallel. Specifically, given a 3D object and its corresponding 3D garment surface, our approach first converts the garment surface into a topological disc by introducing a set of cuts. The resulting cut surface is then fed into a physically-based unclothing simulation module to ensure the garment’s wearability over the object. The unclothing simulation determines which of the previously introduced cuts could be sewn permanently without impacting wearability. Concurrently, the cut surface is converted into an anisotropic stitch mesh. Then, our novel, stochastic, any-time flat-knitting scheduler generates fabrication instructions for an industrial knitting machine. Finally, we fabricate the garment and manually assemble it into one complete covering worn by the target object. We demonstrate our method’s robustness and knitting efficiency by fabricating models with various topological and geometric complexities. Further, we show that our method can be incorporated into a knitting design tool for creating knitted garments with customized patterns.
+  				</p>						
+  				<h3 style="font-size:16px" align="left">
+					[<a href="./wearable/wearable.pdf"><b>Paper</b></a>]  
+					[<a href="./wearable/supple.pdf"><b>Supplemental doc]</b></a>]  
+					[<a href="https://youtu.be/PAZYmuYK8IE"><b>Video</b></a>]  
+				</h3>				
+				<br>
+				<img src="./wearable/pipeline.jpg" width="800" border="0">
+				<p style="font-size:12px" align="left ">
+					<b>Pipeline overview:</b> our pipeline converts an input garment surface into a machine-knittable output wearable by an input target object.(a) the garment surface is cut into a disc; (b) a physically-based simulation is used to verify the wearability of thecut-meshwith given cut labelassignments; (c) an anisotropic stitch mesh is generated from the initial cut-mesh; (d) knitting instructions are generated and (e) sent to an industrialknitting machine for fabrication; and (f) the knitted fabric is manually sewn, the target object is dressed, and the garment is laced.
+				</p>
+				<br>
+				<img src="./wearable/wearablility.jpg" width="800" border="0">
+				<img src="./wearable/bolt_small.jpg" width="800" border="0">
+				<p style="font-size:12px" align="center">Rendered result (top) and photographs (bottom) of the real garment being removed following the wearability simulation. </p>
+				<br>
+  			</div>
+  		</div>
+  	</section>
+	  
+  	<section id="knittable" class="container text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<br> <br> <br>
+  				<p>ACM Transactions on Graphics (TOG)</p>
+  	            <h1>Knittable Stitch Meshes</h1>
+				<p><a href="http://people.csail.mit.edu/kuiwu">Kui Wu</a>, Hannah Swan, <a href="http://www.cemyuksel.com/">Cem Yuksel</a></p>
+				<img src="./knittable/pipeline.png" width="800" border="0">
+				<p style="font-size:12px" align="left ">
+					<b>Stages of our knittable garment modeling system:</b> (a) We begin our interactive modeling process with an input polygonal mesh that specifies the global shape of the model. (b) Using this polygonal mesh we produce a high-resolution stitch mesh, including shift-paths (green faces) that form knittable spiral structures, splitting (yellow faces) and joining (blue faces) mismatched faces that connect them without seams, and short-rows (red faces). Afterwards, we can either (c) generate the yarn curves from the stitch mesh and use a physically-based relaxation process to produce the final yarn-level shape for rendering, or (d) knit the model using the knitting instructions generated from our knittable stitch mesh.
+				</p>
+  				<h3>Abstract</h3>
+  				<p style="font-size:16px" align="left">
+				We introduce knittable stitch meshes for modeling complex 3D knit structures that can be fabricated via knitting. We extend the concept of stitch mesh modeling, which provides a powerful 3D design interface for knit structures but lacks the ability to produce actually knittable models. Knittable stitch meshes ensure that the final model can be knitted. Moreover, they include novel representations for handling important shaping techniques that allow modeling more complex knit structures than prior methods. In particular, we introduce shift-paths that connect the yarn for neighboring rows, general solutions for properly connecting pieces of knit fabric with mismatched knitting directions without introducing seams, and a new structure for representing short rows, a shaping technique for knitting that is crucial for creating various 3D forms, within the stitch mesh modeling framework. Our new 3D modeling interface allows for designing knittable structures with complex surface shapes and topologies, and our knittable stitch mesh structure contains all information needed for fabricating these shapes via knitting. Furthermore, we present a scheduling algorithm for providing stepby-step hand knitting instructions to a knitter, so that anyone who knows how to knit can reproduce the complex models that can be designed using our approach. We show a variety of 3D knit shapes and garment examples designed and knitted using our system.
+  				</p>						
+  				<h3 style="font-size:16px" align="left">
+					[<a href="./knittable/knittable.pdf"><b>Paper</b></a>]  
+					[<a href="http://kuiwuchn.github.io/KnittableStitchMesh/"><b>Online Demo</b></a>]
+					[<a href="https://youtu.be/9jcoREh70Bg"><b>Video</b></a>]  
+					[<a href="./knittable/knittable_bib.txt"><b>Citation</b></a>]
+				</h3>				
+				<br>
+				<img src="./knittable/3teapot_with_mesh.jpg" width="800" border="0">
+				<p style="font-size:12px" align="center">Knitted teapots with different numbers of stitches using different knittable stitch meshes. They are all knitted using 6 separate yarn pieces and they contain 6.3K, 4.4K, and 2.6K stitches from left to right.</p>
+				<br>
+				<img src="./knittable/graphics_models.jpg" width="800" border="0">
+				<img src="./knittable/graphics_knitted.jpg" width="800" border="0">
+				<img src="./knittable/graphics_simulated.jpg" width="800" border="0">
+				<p style="font-size:12px" align="center">Example letters: knittable stitch mesh models, knitted models, and simulated models</p>
+				<br>				
+				<img src="./knittable/knitting_interface.jpg" width="600" border="0">
+				<p style="font-size:12px" width="600" align="left"><b>Our knitting interface:</b> On the top-right corner the knitting instruction code is displayed along with how many times the instruction should be repeated. Below the instruction code a short video-clip show how to perform the instruction. At the bottom-right side the entire model is displayed, along with the previously knitted part shaded in green and the stitches that correspond to the current instructions shaded in red. The main view provides a yarn-level rendering of the part of the model that is previously knit and the part that is currently being knit.</p>
+				<br>
+  			</div>
+  		</div>
+  	</section>
+	  
+	<section id="stitchmeshing" class="container text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<br> <br> <br>
+				<p>SIGGRAPH 2018</p>
+				<h1>Stitch Meshing</h1>
+				<p><a href="http://people.csail.mit.edu/kuiwu/">Kui Wu</a>, <a href="https://gaoxifeng.github.io/">Xifeng Gao</a>, <a href="http://zfergus.me/">Zachary Ferguson</a>, <a href="https://cims.nyu.edu/gcl/daniele.html">Daniele Panozzo</a>, <a href="http://www.cemyuksel.com/">Cem Yuksel</a></p>
+				<img src="./stitchmeshing/stitchmeshing.jpg" width="800" height="300" border="0">
+				<p style="font-size:12px" align="center">Example yarn-level models generated from input 3D surfaces using our fully automatic pipeline.</p>
+				<h3>Abstract</h3>
+				<p style="font-size:16px" align="left">
+				We introduce the first fully automatic pipeline to convert arbitrary 3D shapes into knit models. Our pipeline is based on a global parametrization remeshing pipeline to produce an isotropic quad-dominant mesh aligned with a 2-RoSy field. The knitting directions over the surface are determined using a set of custom topological operations and a two-step global optimization that minimizes the number of irregularities. The resulting mesh is converted into a valid stitch mesh that represents the knit model. The yarn curves are generated from the stitch mesh and the final yarn geometry is computed using a yarn-level relaxation process. Thus, we produce topologically valid models that can be used with a yarn-level simulation. We validate our algorithm by automatically generating knit models from complex 3D shapes and processing over a hundred models with various shapes without any user input or parameter tuning. We also demonstrate applications of our approach for custom knit model generation using fabrication via 3D printing.
+				</p>	
+				<img src="./stitchmeshing/pipeline.jpg" width="800" height="370" border="0">
+				<p style="font-size:12px" align="left"> The overview of our pipeline: (a) an arbitrary input 3D model is converted into (b) an isotropic quad-dominant mesh with only quads and triangles via remeshing. Then, (c) the edges of the mesh are labeled, and (d) knitting directions over the surface are determined (arrows showing the wale knitting direction on each face). Finally, (e) a stitch mesh is generated and (f) the final yarn-level model is produced from the stitch mesh via relaxation and yarn generation operations.</p>					
+				<h3 style="font-size:16px" align="left">
+					[<a href="./stitchmeshing/StitchMeshing.pdf"><b>Paper</b></a>] 
+					[<a href="https://youtu.be/FuVPUS4b_5g"><b>Video</b></a>] 
+					[<a href="https://github.com/kuiwuchn/stitchMeshing"><b>Code</b></a>]
+					[<a href="./stitchmeshing/stitchmeshing_bib.txt"><b>Citation</b></a>]</h3><br>
+				<img src="./stitchmeshing/bunnies_5.jpg" width="800" border="0">
+				<p style="font-size:12px" align="center">Yarn-level knit structures generated from the “bunny” model with three different resolutions: 1.3K, 4K, 7K, 16K, and 48K stitches</p><br>
+				<h3 style="font-size:16px" align="left"> More results
+				<a href="./stitchmeshing/horse.jpg"><img src="./stitchmeshing/horse.jpg" height="110" border="0"></a>
+				<a href="./stitchmeshing/rockerarm.jpg"><img src="./stitchmeshing/rockerarm.jpg" height="110" border="0"></a>
+				<a href="./stitchmeshing/sculpt.jpg"><img src="./stitchmeshing/sculpt.jpg" height="110" border="0"></a>
+				<a href="./stitchmeshing/armadillo.jpg"><img src="./stitchmeshing/armadillo.jpg" height="110" border="0"></a>
+				</h3><br>
+				<h3 style="font-size:16px" align="left"> 3D prints &emsp; &emsp; &emsp; &emsp; &emsp;
+				<a href="./stitchmeshing/octopus.jpg"><img src="./stitchmeshing/octopus.jpg" height="150" border="0"></a> &emsp;
+				<a href="./stitchmeshing/bunny_printed.jpg"><img src="./stitchmeshing/bunny_printed.jpg" height="150" border="0"></a>
+				</h3><br>
+				<img src="./stitchmeshing/bunny_sim.gif" height="320" border="0">	
+			</div>
+		</div>
+	</section>   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kui Wu</p>
+        </div>
+    </footer>
+
+   <!-- jQuery -->
+
+
+</body>
+
+</html>

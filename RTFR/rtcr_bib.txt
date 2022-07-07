@@ -1,0 +1,10 @@
+@article{Wu:2017:rtcr, 
+author={K. Wu and C. Yuksel}, 
+journal={IEEE Transactions on Visualization and Computer Graphics}, 
+title={Real-time Cloth Rendering with Fiber-level Detail}, 
+year={2017}, 
+volume={PP}, 
+number={99}, 
+pages={1-1}, 
+doi={10.1109/TVCG.2017.2731949}, 
+ISSN={1077-2626}}

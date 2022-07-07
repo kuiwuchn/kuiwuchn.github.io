@@ -1,0 +1,10 @@
+@article{Wu2019:knittable,
+   author       = {Kui Wu and Hannah Swan and Cem Yuksel},
+   title        = {Knittable Stitch Meshes},
+   journal      = {ACM Transactions on Graphics},
+   year         = {2019},
+   publisher    = {ACM Press},
+   volume       = {38},
+   number       = {1},
+   address      = {New York, NY, USA},
+}

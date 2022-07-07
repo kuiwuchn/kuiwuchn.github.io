@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fast Fluid Simulations with Sparse Volumes on the GPU</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+	<section id="gvdb_flip" class="container text-center">
+	        <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2">
+					<br>
+					<br>
+					<br>
+					<p>EUROGRAPHICS 2018</p>
+					
+	                <h1>Fast Fluid Simulations with Sparse Volumes on the GPU</h1>
+
+					<p><a href="http://people.csail.mit.edu/kuiwu">Kui Wu</a>, <a href="https://ttnghia.github.io/">Nghia Truong</a>, <a href="http://www.cemyuksel.com/">Cem Yuksel</a>, <a href="http://www.ramakarl.com/website/">Rama Hoetzlein</a></p>
+
+					<img src="./GVDB_FLIP/gvdb_flip_teaser.jpg" width="800" height="250" border="0">
+					<p style="font-size:12px" align="left">
+					City scene simulated with 29 million particles on a 512×256×512 grid with our spatially sparse, matrix-free FLIP solver on a Quadro GP100 GPU at an average 1.8 seconds/frame
+					</p>
+					
+					<p> </p>
+
+					<h3>Abstract</h3>
+
+					<p style="font-size:16px" align="left">
+					We introduce efficient, large scale fluid simulation on GPU hardware using the fluid-implicit particle (FLIP) method over a sparse hierarchy of grids represented in <a href="https://developer.nvidia.com/gvdb/">NVIDIA GVDB Voxels</a>. Our approach handles tens of millions of particles within a virtually unbounded simulation domain. We describe novel techniques for parallel sparse grid hierarchy construction and fast incremental updates on the GPU for moving particles. In addition, our FLIP technique introduces sparse, work efficient parallel data gathering from particle to voxel, and a matrix-free GPU-based conjugate gradient solver optimized for sparse grids. Our results show that our method can achieve up to an order of magnitude faster simulations on the GPU as compared to FLIP simulations running on the CPU.
+					</p>
+					
+					<img src="./GVDB_FLIP/gvdb_teapot.jpg" width="800" height="1020" border="0">
+					<p style="font-size:12px" align="left"> Simulation of an expanding, sparse domain with 2 million particles. The domain reaches up to 3360×160×2272, with the fluid fully simulated in the sparse bricks indicated in blue. Each brick is (2^5)^3 = 32768 voxels. Simulation takes 1 second per frame on a Quadro GP100, a lower efficiency than typical for 2M particles due to a higher ratio of unused voxels per brick.</p>
+					<p> </p>
+					
+					<h3 style="font-size:16px" align="left">Paper [<a href="./GVDB_FLIP/gvdb_flip.pdf"><b>Preprint</b></a>] (PDF, 13Mb) </h3> 
+					<h3 style="font-size:16px" align="left">Code [<a href="https://developer.nvidia.com/gvdb"><b>GVDB 1.1</b></a>]</h3>
+					<h3 style="font-size:16px" align="left">Slides [<a href="./GVDB_FLIP/gvdb_flip_EG18.pdf"><b>PDF</b></a>]</h3>
+					<h3 style="font-size:16px" align="left">Citation [<a href="./GVDB_FLIP/gvdb_flip_bib.txt"><b>Bibtex</b></a>]</h3>
+					<h3 >Demo</h3>
+					<span class='embed-youtube' style='text-align:center; display: block;'><iframe width="560" height="315" src="https://www.youtube.com/embed/7VPPKKpde3A" frameborder="0" allowfullscreen></iframe></span> 
+					<p> </p>
+					
+					<h4 style="font-size:16px" align="left">Acknowledgements</h4>
+					<p style="font-size:16px" align="left">
+					The authors would like to specially thank Ken Museth (Weta Digital), Gergely Klar (Dreamworks Animation), and Tristan Lorach (NVIDIA) for their support and guidance. This work was supported in part by NSF grant #1538593.
+					</p>
+				</div>
+			</div>
+		</section>   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kui Wu 2020</p>
+        </div>
+    </footer>
+
+   <!-- jQuery -->
+
+
+</body>
+
+</html>

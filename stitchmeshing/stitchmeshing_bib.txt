@@ -1,0 +1,11 @@
+@article{Wu2018:stitchmeshing,
+ author = {Kui Wu and Xifeng Gao and Zachary Ferguson and Daniele Panozzo and Cem Yuksel},  
+ title = {Stitch Meshing},  
+ journal = {ACM Trans. Graph.},  
+ issue_date = {Aug 2018},  
+ volume = {37},  
+ number = {4},    
+ year = {2018},    
+ publisher = {ACM},  
+ address = {New York, NY, USA} 
+}
