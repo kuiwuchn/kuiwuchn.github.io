@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>High-Order Moment-Encoded Kinetic Simulation of Turbulent Flows</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   
+	<section id="project" class="container content-section text-center">
+	        <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2">
+					<br>
+					<br>
+					<br
+					<p>ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2023)</p>
+					
+	                <h1 style="font-size:45px" align="center">High-Order Moment-Encoded <br> Kinetic Simulation of Turbulent Flows</h1>
+					<h4><a href="https://lwkobe.github.io/"> Wei Li</a>, 
+					Tongtong Wang,
+					Zherong Pan, 
+					<a href="https://gaoxifeng.github.io/"> Xifeng Gao</a>,				
+					<a href="https://people.csail.mit.edu/kuiwu">Kui Wu</a>,				
+					<a href="https://pages.saclay.inria.fr/mathieu.desbrun/">Mathieu Desbrun</a><h4> 
+					<p> <br></p>
+					<img src="tractor.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> We contribute a new kinetic solver for incompressible and single-phase fluid simulation interacting with complex solids. By relying on only three moments per grid node instead of the usual 27-direction velocity discretization, we reduce memory usage threefold and improve efficiency by an order of magnitude, with limited impact on accuracy. As a consequence, a high-quality visual simulation of a tractor in a wind tunnel (with passively-advected colored particles to visualize the flow) can be achieved efficiently on a commodity GPU.</p>
+
+					<p> <br></p>
+
+					<h3>Abstract</h3>
+
+					<p style="font-size:16px" align="left">
+					Kinetic solvers for incompressible fluid simulation were designed to run efficiently on massively parallel architectures such as GPUs. While these lattice Boltzmann solvers have recently proven much faster and more accurate than the macroscopic Navier-Stokes-based solvers traditionally used in graphics, it systematically comes at the price of a very large memory requirement: a mesoscopic discretization of statistical mechanics requires over an order of magnitude more variables per grid node than most fluid solvers in graphics.  In order to open up kinetic simulation to gaming and simulation software packages on commodity hardware, we propose a High-Order Moment-Encoded Lattice-Boltzmann-Method solver which we coined HOME-LBM, requiring only the storage of a few moments per grid node, with little to no loss of accuracy in the typical simulation scenarios encountered in graphics. We show that our lightweight and lightspeed fluid solver requires three times less memory and runs ten times faster than state-of-the-art kinetic solvers, for a nearly-identical visual output. 
+					</p>
+					
+					<hr>
+					
+					<h3 style="font-size:16px" align="left">Paper [<a href="homelbm.pdf"><b>Preprint</b></a>] </h3>
+
+					
+					<h3 >Video</h3>
+					
+					<span class='embed-youtube' style='text-align:center; display: block;'><iframe width="800" height="450" src="https://www.youtube.com/embed/TY5jBhfheDU" frameborder="0" allowfullscreen></iframe></span>
+					
+					<hr>
+					
+					<h3 >Results</h3>
+					
+					<img src="lbm_octopus.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> Octopus: A complex object in the shape of an octopus with multiple serpentine grooves is placed in a turbulent wind field. A turbulent wake is formed.</p>
+					<p><br> </p>
+					
+					<img src="lbm_fern.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> Wind through a fern: A static 3D model of a fern is placed in a strong flow field, generating a complex wake (visualized with particles).</p>
+					<p><br> </p>
+					
+					<img src="lbm_propeller.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> Propeller: A spinning propeller placed in a constant flow field going towards the right creates complex vortical patterns. In this simulation, passive colored particles are emitted at the tips of the four blades purely for visualization purposes.</p>
+					<p><br> </p>
+					
+					<img src="lbm_leaves.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> Leaves blown by a jet: Several leaves of different weights are dropped on a jet flow, demonstrating two-way coupling effects.</p>
+					<p><br> </p>
+					
+					<img src="lbm_comb.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left">Air comb: we simulate a hair comb containing sixty teeth moving around and creating fine vortices in its wake, properly capturing the complex fluid-solid interaction engendered by this finely-detailed geometry.</p>
+					<p><br> </p>
+					
+					<img src="lbm_rotor.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> Rotor lift: Spinning a rotor (2 kilograms, span of 3.75 meters) at 19 rad/s makes it lift off; once the applied torque stops, it falls back onto the floor.</p>
+					<p><br> </p>
+					
+					<img src="lbm_car.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> Falling cars. In this two-way coupling example of a very light car (top) and of a heavier car (bottom) dropped on the floor from a height, the car’s
+terminal speed ends up being very different for each case, and its wake disturbs a static smoke ring.</p>
+					<p><br> </p>
+					
+					<hr>
+					
+			
+					
+					<p> </p>
+				</div>
+			</div>
+		</section>   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kui Wu</p>
+        </div>
+    </footer>
+
+   <!-- jQuery -->
+
+
+</body>
+
+</html>
