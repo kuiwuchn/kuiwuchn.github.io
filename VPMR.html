@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Visual-Preserving Mesh Repair</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   
+	<section id="project" class="container content-section text-center">
+	        <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2">
+					<br>
+					<br>
+					<br
+					<p>IEEE Transactions on Visualization and Computer Graphics (TVCG), 2024</p>
+					<p>To be presented at SGP 2024</p>
+					
+	                <h1 style="font-size:45px" align="center">Visual-Preserving Mesh Repair</h1>					 
+					<h4>
+					Zhongtian Zheng,
+					<a href="https://gaoxifeng.github.io/"> Xifeng Gao</a>,	
+					Zherong Pan, 
+					<a href="https://lwkobe.github.io/"> Wei Li</a>,  
+					<a href="https://wang-ps.github.io/">Peng-Shuai Wang</a>, <br>
+					Guoping Wang,			
+					<a href="https://people.csail.mit.edu/kuiwu">Kui Wu</a>,					
+					<h4> 
+					<p> <br></p>
+					<img src="VPMR/comparison.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> Comparison with existing methods: We compare mesh repair algorithms on the textured and mis-oriented input model from
+ShapeNet [2]. None of the existing works can convert the input mesh into watertight manifold mesh while preserving the textures and
+input details (see the zoom-in view of the engine).</p>
+
+					<p> <br></p>
+
+					<h3>Abstract</h3>
+
+					<p style="font-size:16px" align="left">
+					Mesh repair is a long-standing challenge in computer graphics and related fields. Converting defective meshes into watertight manifold meshes can greatly benefit downstream applications such as geometric processing, simulation, fabrication, learning, and synthesis. In this work, by assuming the model is visually correct, we first introduce three visual measures for visibility, orientation, and openness, based on ray-tracing. We then present a novel mesh repair framework incorporating visual measures with several critical steps, i.e., open surface closing, face reorientation, and global optimization, to effectively repair meshes with defects (e.g., gaps, holes, self-intersections, degenerate elements, and inconsistent orientations) and preserve visual appearances. Our method reduces unnecessary mesh complexity without compromising geometric accuracy or visual quality while preserving input attributes such as UV coordinates for rendering. We evaluate our approach on hundreds of models randomly selected from ShapeNet and Thingi10K, demonstrating its effectiveness and robustness compared to existing approaches.
+					</p>
+					
+					<hr>
+					
+					<h3 style="font-size:16px" align="left">Paper [<a href="VPMR.pdf"><b>Preprint</b></a>] </h3>
+
+					<hr>
+					
+					
+					
+			
+					
+					<p> </p>
+				</div>
+			</div>
+		</section>   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kui Wu</p>
+        </div>
+    </footer>
+
+   <!-- jQuery -->
+
+
+</body>
+
+</html>
