@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Real-time Physically Guided Hair Interpolation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   
+	<section id="project" class="container content-section text-center">
+	        <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2">
+					<br>
+					<br>
+					<br
+					<p>ACM Transactions on Graphics (Proceedings of SIGGRAPH 2024)</p>
+					
+	                <h1 style="font-size:45px" align="center">Real-time Physically Guided Hair Interpolation</h1>
+					<h4><a href="https://chichenghsu.com/"> Jerry Hsu</a>, 
+					<a href="https://tongttwang.github.io/"> Tongtong Wang</a>, 
+					Zherong Pan,
+					<a href="https://gaoxifeng.github.io/"> Xifeng Gao</a>,		
+					<a href="http://www.cemyuksel.com/"> Cem Yuksel</a>,							
+					<a href="https://people.csail.mit.edu/kuiwu">Kui Wu</a><h4> 
+					<p> <br></p>
+					<img src="hairInterp/teaser.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left">Interpolated rendered hairs from the given guide hairs. (a) the hair model with $128$ guide hairs; (b) 106K rendered hairs with 1.7M vertices interpolated from the guide hairs using Linear Hair Skinning (LHS) taking 0.28 ms per frame; (c) rendered hairs interpolated using our method taking 0.34 ms per frame. This is especially challenging for interpolation as almost no two guide hairs are the same shape.  </p>
+
+					<p> <br></p>
+
+					<h3>Abstract</h3>
+
+					<p style="font-size:16px" align="left">
+		Strand-based hair simulations have recently become increasingly popular for a range of real-time applications. However, accurately simulating the full number of hair strands remains challenging. A commonly employed technique involves simulating a subset of guide hairs to capture the overall behavior of the hairstyle. Details are then enriched by interpolation using linear skinning. Hair interpolation enables fast real-time simulations but frequently leads to various artifacts during runtime. As the skinning weights are often pre-computed, substantial variations between the initial and deformed shapes of the hair can cause severe deviations in fine hair geometry. Straight hairs may become kinked, and curly hairs may become zigzags. <br><br>
+
+This work introduces a novel physical-driven hair interpolation scheme that utilizes existing simulated guide hair data. Instead of directly operating on positions, we interpolate the internal forces from the guide hairs before efficiently reconstructing the rendered hairs based on their material model. We formulate our problem as a constraint satisfaction problem for which we present an efficient solution. Further practical considerations are addressed using regularization terms that regulate penetration avoidance and drift correction. We have tested various hairstyles to illustrate that our approach can generate visually plausible rendered hairs with only a few guide hairs and minimal computational overhead, amounting to only about 20% of conventional linear hair interpolation. This efficiency underscores the practical viability of our method for real-time applications. 
+					</p>
+					
+					<hr>
+					
+					<h3 style="font-size:16px" align="left">Paper [<a href=""><b>Preprint</b></a>] </h3>
+
+					
+					<h3 >Video</h3>
+					
+					<span class='embed-youtube' style='text-align:center; display: block;'><iframe width="800" height="450" src="https://www.youtube.com/embed/I46nY3zY6Ck" frameborder="0" allowfullscreen></iframe></span>
+					
+					<hr>
+					
+					<h3 >Results</h3>
+					
+					<img src="hairInterp/Danielle2.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Even with straight hairstyles, both one (LHS single) and triple (LHS) guides per rendered hair introduce odd clumping. Despite the reliance on the same LHS scheme for interpolating forces, our method can effectively remove the various artifacts in geometry.</p>
+					<p><br> </p>
+					
+					<img src="hairInterp/Danielle.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Large separations in guide hairs can often cause errors in LHS weights to amplify. Although we do not use any dynamic guide or weight selection, our method remains resistant to geometric artifacts.</p>
+					<p><br> </p>
+
+					<img src="hairInterp/Josh.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Despite only using 128 guide hairs, our interpolation remains robust under the large perturbations common in motion capture data.</p>
+					<p><br> </p>	
+
+					<img src="hairInterp/Hadley.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Directly projecting positions may result in vertices on alternating sides of a protrusion. By taking bending energies into consideration, our SDF penalty energy avoids this issue and produces strands that favor a consistent projection direction.</p>
+					<p><br> </p>						
+
+					
+					<hr>
+					
+			
+					
+					<p> </p>
+				</div>
+			</div>
+		</section>   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kui Wu</p>
+        </div>
+    </footer>
+
+   <!-- jQuery -->
+
+
+</body>
+
+</html>
