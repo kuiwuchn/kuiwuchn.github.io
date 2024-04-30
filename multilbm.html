@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kinetic Simulation of Turbulent Multifluid Flows</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   
+	<section id="project" class="container content-section text-center">
+	        <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2">
+					<br>
+					<br>
+					<br
+					<p>ACM Transactions on Graphics (Proceedings of SIGGRAPH 2024)</p>
+					
+	                <h1 style="font-size:45px" align="center">Kinetic Simulation of Turbulent Multifluid Flows</h1>
+					<h4><a href="https://lwkobe.github.io/">Wei Li</a>, 			
+					<a href="https://people.csail.mit.edu/kuiwu">Kui Wu</a>,				
+					<a href="https://pages.saclay.inria.fr/mathieu.desbrun/">Mathieu Desbrun</a><h4> 
+					<p> <br></p>
+					<img src="multilbm/teaser.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left"> Glugging with Rayleigh–Taylor instability: ur multiphase solver produces guggling for two colored immiscible fluids in the transparent upper container and air in the bottom one (water:oil:air with density ratios 800:400:1, with a square conduit in between. The two fluids are initially arranged with the heavier fluid (blue) on top of the lighter fluid (cyan), thus forming Rayleigh–Taylor instabilities early on, before flowing down and exhibiting splashes, bubbles and wetting, and ending up in stable layers based on their densities.</p>
+
+					<p> <br></p>
+
+					<h3>Abstract</h3>
+
+					<p style="font-size:16px" align="left">
+					Despite its visual appeal, the simulation of separated multiphase flows (i.e., streams of fluids separated by interfaces) faces numerous challenges in accurately reproducing complex behaviors such as guggling, wetting, or bubbling. These difficulties are especially pronounced for high Reynolds numbers and large density variations between fluids, most likely explaining why they have received comparatively little attention in Computer Graphics compared to single- or two-phase flows. In this paper, we present a full LBM solver for multifluid simulation. We derive a conservative phase field model with which the spatial presence of each fluid or phase is encoded to allow for the simulation of miscible, immiscible and even partially-miscible fluids, while the temporal evolution of the phases is performed using a D3Q7 lattice-Boltzmann discretization. The velocity field, handled through the recent high-order moment-encoded LBM (HOME-LBM) framework to minimize its memory footprint, is simulated via a velocity-based distribution stored on a D3Q27 or D3Q19 discretization to offer accuracy and stability to large density ratios even in turbulent scenarios, while coupling with the phases through pressure, viscosity, and interfacial forces is achieved by leveraging the diffuse encoding of interfaces. The resulting solver addresses a number of limitations of kinetic methods in both computational fluid dynamics and computer graphics: it offers a fast, accurate, and low-memory fluid solver enabling efficient turbulent multiphase simulations free of the typical oscillatory pressure behavior near boundaries. We present several numerical benchmarks, examples and comparisons of multiphase flows to demonstrate our solver's visual complexity, accuracy, and realism. 
+					</p>
+					
+					<hr>
+					
+					<h3 style="font-size:16px" align="left">Paper [<a href=""><b>Preprint</b></a>] </h3>
+
+					
+					<h3 >Video</h3>
+					
+					
+					<hr>
+					
+					<h3 >Results</h3>
+					
+					<img src="multilbm/dambreak.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Dam breaking over thin shell. A heavier blue liquid hits a thin obstacle first and forms an obvious crown splash, then rushes into the lighter gray liquids, forming a large amount of turbulence and bubbles. The two fluids end up separated at the end.</p>
+					<p><br> </p>
+					
+					<img src="multilbm/unmixing.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Mixture unmixing. Initializing a three-phase mixture (two liquids, plus air; density ratios: 800:80:1 with equal volume, the homogeneous mixture gets separated due to gravity. Small droplets are visible on the top wall of the container.</p>
+					<p><br> </p>
+					
+					<img src="multilbm/immiscible.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Dam break with three miscible/immiscible phases. Three liquids, immiscible with the air phase, are dropped in a container. When they are all miscible with each other (top), they finally form a grey mixture; For partial miscibility (middle), a resulting half-mixed layer interface appears. If they are all immiscible (bottom), clear interfaces between different liquids remain at the end.</p>
+					<p><br> </p>
+					
+					<img src="multilbm/pumice.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Flows through pumice. Two liquids with different densities are poured on the top of a porous rock containing a multitude of cavities and tunnels and the heavier liquid (blue) starts flowing slowly through pumice, followed by the lighter one (cyan). The two liquids end up separated at the bottom.</p>
+					<p><br> </p>
+
+					<img src="multilbm/oil.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center"> Water poured into oil. With density ratios of water:oil:air set to 800:720:1, a ball of water drops into an oil tank, creating an emulsion.</p>
+					<p><br> </p>
+
+					
+					<hr>
+					
+			
+					
+					<p> </p>
+				</div>
+			</div>
+		</section>   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kui Wu</p>
+        </div>
+    </footer>
+
+   <!-- jQuery -->
+
+
+</body>
+
+</html>
