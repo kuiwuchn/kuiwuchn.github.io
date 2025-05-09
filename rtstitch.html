@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Real-Time Knit Deformation and Rendering</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   
+	<section id="project" class="container content-section text-center">
+	        <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2">
+					<br>
+					<br>
+					<br
+					<p>ACM Transactions on Graphics (Proceedings of SIGGRAPH 2025)</p>
+					
+	                <h1 style="font-size:40px" align="center">Real-Time Knit Deformation and Rendering</h1>
+					<h4><a href="https://dcjmj.github.io/"> Tao Huang*</a>, 
+					<a href="https://luke-skycrawler.github.io/"> Haoyang Shi*</a>, 
+					<a href="https://wang-mengdi.github.io/"> Mengdi Wang*</a>,	
+					<a href="https://yuxingqiu.github.io/"> Yuxing Qiu</a>,		
+					<a href="https://yangzzzy.github.io/"> Yin Yang</a>,							
+					<a href="https://people.csail.mit.edu/kuiwu">Kui Wu</a><h4> 
+					<p> <br></p>
+					<img src="rtstitch/teaser.jpg" width="800" border="0">
+					<p style="font-size:12px" align="left">Given the animated stitch mesh with a non-periodic Flame pattern (left), our system produces faithful yarn geometry (middle) based on underlying mesh deformation and high-quality knit rendering with fiber-level details under environmental light (right). The simulation and rendering take 1.05 and 23.6 ms, respectively, on an Nvidia RTX3090.</p>
+
+					<p> <br></p>
+
+					<h3>Abstract</h3>
+
+					<p style="font-size:16px" align="left">
+		The knit structure consists of interlocked yarns, with each yarn comprising multiple plies comprising tens to hundreds of twisted fibers. This intricate geometry and the large number of geometric primitives present substantial challenges for achieving high-fidelity simulation and rendering in real-time applications. In this work, we introduce the first real-time framework that takes an animated stitch mesh as input and enhances it with yarn-level simulation and fiber-level rendering. Our approach relies on a knot-based representation to model interlocked yarn contacts. The knot positions are interpolated from the underlying mesh, and associated yarn control points are optimized using a physically inspired energy formulation, which is solved through a GPU-based Gauss-Newton scheme for real-time performance. The optimized control points are sent to the GPU rasterization pipeline and rendered as yarns with fiber-level details. In real-time rendering, we introduce several decomposition strategies to enable realistic lighting effects on complex knit structures, even under environmental lighting, while maintaining computational and memory efficiency. Our simulation faithfully reproduces yarn-level structures under deformations, e.g., stretching and shearing, capturing interlocked yarn behaviors. The rendering pipeline achieves near-ground-truth visual quality while being 120,000x faster than path tracing reference with fiber-level geometries. The whole system provides real-time performance and has been evaluated through various application scenarios, including knit simulation for small patches and full garments and yarn-level relaxation in the design pipeline.
+					</p>
+					
+					<hr>
+					
+					<h3 style="font-size:16px" align="left">Paper [<a href="rtstitch/rtstitch.pdf"><b>Preprint</b></a>] </h3>
+
+					
+					<h3 >Video</h3>
+					
+					<span class='embed-youtube' style='text-align:center; display: block;'><iframe width="800" height="450" src="https://www.youtube.com/embed/llfLHMAPQbo" frameborder="0" allowfullscreen></iframe></span>
+					
+					<hr>
+					
+					<h3 >Results</h3>
+					
+					<img src="rtstitch/glove.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center">Comparison to previous rendering solutions. FLIP error maps are displayed at the bottom-left corner. Our method is at least three orders of magnitude faster and produces results nearly identical to ground truth with fiber-level geometry and path tracing with the lowest FLIP error.</p>
+					<p><br> </p>
+					
+					<img src="rtstitch/teapot.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center">Knit teapot with three distinct types of flyaway configurations, cotton, extended-rayon3 (flyaway length is tripled for a fuzzier appearance), and rayon4. The bottom left and top right of each image compare our method with the reference. These models comprise 51M, 55M, and 61M fiber segments, respectively. Reference takes 9, 8.3, and 7 min, while ours only needs 5.1, 8.1, and 7.3 ms.</p>
+					<p><br> </p>
+
+					<img src="rtstitch/patch.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center">Our approach produces rendered results with equal quality to the reference for view and light direction angles of 15°, 75°, and 180°(left column), and under different environmental lighting (right column). The reference employs full fiber geometry with 118M segments and takes around 15 and 28 mins for directional and environment lights, while ours utilizes only 100K segments with only 9.4 and 20.6 ms, respectively.</p>
+					<p><br> </p>	
+
+					<img src="rtstitch/pattern.jpg" width="800" border="0">
+					<p style="font-size:12px" align="center">From left to right: stitch mesh, yarn geometry after our knot-based optimization, our final rendering result, and images of full yarn-level simulation result from Yuan et al . [2024]. Our simulation only takes 1 ms per frame, while full yarn-level simulation and volumetric homogenization [Yuan et al. 2024] take 7680 ms and 96 ms, respectively, per time step.</p>
+					<p><br> </p>						
+
+					
+					<hr>
+					
+			
+					
+					<p> </p>
+				</div>
+			</div>
+		</section>   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Kui Wu</p>
+        </div>
+    </footer>
+
+   <!-- jQuery -->
+
+
+</body>
+
+</html>
